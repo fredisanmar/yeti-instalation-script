@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /
 echo "====================instalando dependencias=========================="
 apt-get install -y build-essential git python-dev mongodb redis-server libxml2-dev libxslt-dev zlib1g-dev python-virtualenv wkhtmltopdf
 rm /var/lib/mongodb/mongod.lock
