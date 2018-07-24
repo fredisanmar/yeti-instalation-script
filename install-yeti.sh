@@ -40,7 +40,7 @@ chmod +x /yeti/yeti.py
 #
 #
 #
-rm /etc/nginx/sites-enabled/
+rm /etc/nginx/sites-enabled/default
 cp extras/nginx/yeti /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/yeti /etc/nginx/sites-enabled/yeti
 service nginx restart
