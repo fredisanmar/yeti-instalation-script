@@ -33,7 +33,6 @@ cp extras/systemd/*.service /etc/systemd/system/
 systemctl enable yeti_uwsgi.service
 systemctl enable yeti_oneshot.service
 systemctl enable yeti_feeds.service
-systemctl enable yeti_inline.service
 systemctl enable yeti_exports.service
 systemctl enable yeti_analytics.service
 systemctl enable yeti_beat.service
