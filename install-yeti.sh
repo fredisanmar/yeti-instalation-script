@@ -26,7 +26,6 @@ cd yeti/
 pip install -r requirements.txt
 pip install uwsgi
 yarn install
-cd ..
 echo "====================creando servicios================================"
 useradd yeti -p yeti
 cp extras/systemd/*.service /etc/systemd/system/
@@ -38,6 +37,7 @@ systemctl enable yeti_exports.service
 systemctl enable yeti_analytics.service
 systemctl enable yeti_beat.service
 systemctl daemon-reload
+cd ..
 chown -R yeti:yeti yeti/
 chmod +x yeti/yeti.py
 echo "====================requerimientos instalados========================"
