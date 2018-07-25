@@ -1,4 +1,5 @@
 #!/bin/bash
+i= pwd
 echo "====================instalando dependencias=========================="
 apt-get install build-essential git python-dev mongodb redis-server libxml2-dev libxslt-dev zlib1g-dev python-virtualenv python-pip nginx yarn -y
 service mongodb restart
@@ -23,6 +24,8 @@ python get-pip.py
 echo "====================pip instalado o actualizado======================"
 echo "====================instalando requerimientos de yeti================"
 cd /yeti
+rm extras/systemd/yeti_uwsgi.service
+mv $i/yeti_uwsgi.service /etc/systemd/system/
 pip install -r requirements.txt
 pip install uwsgi
 yarn install
