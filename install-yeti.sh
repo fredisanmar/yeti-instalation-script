@@ -16,6 +16,7 @@ echo "====================yarn instalado==================================="
 echo "====================clonando yeti===================================="
 cd /
 rm -r /yeti
+cd /
  git clone https://github.com/yeti-platform/yeti.git
  mv systemd/ /yeti
 echo "====================yeti clonado====================================="
