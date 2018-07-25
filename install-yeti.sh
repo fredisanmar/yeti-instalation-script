@@ -1,5 +1,5 @@
 #!/bin/bash
-cp yeti_uwsgi.service /
+cp -r systemd/ /
 echo "====================instalando dependencias=========================="
 apt-get install build-essential git python-dev mongodb redis-server libxml2-dev libxslt-dev zlib1g-dev python-virtualenv python-pip nginx yarn -y
 service mongodb restart
@@ -17,7 +17,7 @@ echo "====================clonando yeti===================================="
 cd /
 rm -r /yeti/
  git clone https://github.com/yeti-platform/yeti.git
- mv yeti_uwsgi.service /yeti
+ mv -r systemd/ /yeti
 echo "====================yeti clonado====================================="
 echo "====================instalando pip==================================="
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -28,8 +28,8 @@ cd /yeti
 pip install -r requirements.txt
 pip install uwsgi
 yarn install
-rm extras/systemd/yeti_uwsgi.service
-mv yeti_uwsgi.service extras/systemd/
+rm -r extras/systemd/
+mv -r systemd/ extras/
 echo "====================creando servicios================================"
 useradd yeti
 cp extras/systemd/*.service /etc/systemd/system/
