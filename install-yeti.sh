@@ -25,7 +25,7 @@ echo "====================pip instalado o actualizado======================"
 echo "====================instalando requerimientos de yeti================"
 cd /yeti
 rm extras/systemd/yeti_uwsgi.service
-mv $i/yeti_uwsgi.service /etc/systemd/system/
+cp $i/yeti_uwsgi.service extras/systemd/
 pip install -r requirements.txt
 pip install uwsgi
 yarn install
