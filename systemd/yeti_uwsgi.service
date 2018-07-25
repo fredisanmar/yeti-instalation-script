@@ -5,6 +5,7 @@ After=mongodb.service redis.service
 [Service]
 Type=simple
 User=yeti
+WorkingDirectory=/yeti
 ExecStart=/usr/local/bin/uwsgi --socket 127.0.0.1:8000 -w yeti --callable webapp --processes 4 --threads 2 --stats 127.0.0.1:9191
 Restart=always
 KillSignal=SIGQUIT
@@ -15,4 +16,4 @@ NotifyAccess=all
 [Install]
 WantedBy=multi-user.target
 
-WorkingDirectory=/yeti
+
