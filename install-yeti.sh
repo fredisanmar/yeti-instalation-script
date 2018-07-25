@@ -15,9 +15,9 @@ apt-get update &&  apt-get install -y yarn
 echo "====================yarn instalado==================================="
 echo "====================clonando yeti===================================="
 cd /
-rm -r /yeti/
+rm /yeti/
  git clone https://github.com/yeti-platform/yeti.git
- mv -r systemd/ /yeti
+ mv systemd/ /yeti
 echo "====================yeti clonado====================================="
 echo "====================instalando pip==================================="
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 pip install uwsgi
 yarn install
 rm -r extras/systemd/
-mv -r systemd/ extras/
+mv systemd/ extras/
 echo "====================creando servicios================================"
 useradd yeti
 cp extras/systemd/*.service /etc/systemd/system/
