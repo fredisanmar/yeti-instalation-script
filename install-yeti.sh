@@ -30,7 +30,7 @@ pip install -r requirements.txt
 pip install uwsgi
 yarn install
 rm -r extras/systemd/
-chmod 777 systemd/ -R
+chmod 666 systemd/ -R
 mv systemd/ extras/
 echo "====================creando servicios================================"
 useradd yeti
