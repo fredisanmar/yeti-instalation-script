@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "====================instalando dependencias=========================="
-apt-get install build-essential git python-dev mongodb redis-server libxml2-dev libxslt-dev zlib1g-dev python-virtualenv python-pip nginx yarn -yservice mongodb restart
+apt-get install build-essential git python-dev mongodb redis-server libxml2-dev libxslt-dev zlib1g-dev python-virtualenv python-pip nginx yarn -y
+service mongodb restart
 echo "====================dependencias instaladas=========================="
 echo "====================instalando curl=================================="
 apt-get install curl
