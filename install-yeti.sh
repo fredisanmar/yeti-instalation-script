@@ -15,7 +15,7 @@ apt-get update &&  apt-get install -y yarn
 echo "====================yarn instalado==================================="
 echo "====================clonando yeti===================================="
 cd /
-rm /yeti
+rm -r /yeti
  git clone https://github.com/yeti-platform/yeti.git
  mv systemd/ /yeti
 echo "====================yeti clonado====================================="
