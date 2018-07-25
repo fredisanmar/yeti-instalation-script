@@ -2,6 +2,7 @@
 cp -r systemd/ /
 echo "====================instalando dependencias=========================="
 apt-get install build-essential git python-dev mongodb redis-server libxml2-dev libxslt-dev zlib1g-dev python-virtualenv python-pip nginx yarn -y
+rm /var/lib/mongodb/mongod.lock
 service mongodb restart
 echo "====================dependencias instaladas=========================="
 echo "====================instalando curl=================================="
