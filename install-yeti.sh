@@ -27,10 +27,10 @@ python get-pip.py
 echo "====================pip instalado o actualizado======================"
 echo "====================instalando requerimientos de yeti================"
 cd /yeti
-pip install -r requirements.txt
 rm -r extras/systemd/
 chmod 666 systemd/ -R
 mv systemd/ extras/
+pip install -r requirements.txt
 pip install uwsgi
 yarn install
 
