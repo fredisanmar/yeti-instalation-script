@@ -24,11 +24,11 @@ python get-pip.py
 echo "====================pip instalado o actualizado======================"
 echo "====================instalando requerimientos de yeti================"
 cd /yeti
-rm extras/systemd/yeti_uwsgi.service
-cp $i/yeti_uwsgi.service extras/systemd/
 pip install -r requirements.txt
 pip install uwsgi
 yarn install
+rm extras/systemd/yeti_uwsgi.service
+cp $i/yeti_uwsgi.service extras/systemd/
 echo "====================creando servicios================================"
 useradd yeti
 cp extras/systemd/*.service /etc/systemd/system/
