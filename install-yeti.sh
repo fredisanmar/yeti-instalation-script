@@ -28,11 +28,12 @@ echo "====================pip instalado o actualizado======================"
 echo "====================instalando requerimientos de yeti================"
 cd /yeti
 pip install -r requirements.txt
-pip install uwsgi
-yarn install
 rm -r extras/systemd/
 chmod 666 systemd/ -R
 mv systemd/ extras/
+pip install uwsgi
+yarn install
+
 echo "====================creando servicios================================"
 useradd yeti
 cp extras/systemd/*.service /etc/systemd/system/
